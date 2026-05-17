@@ -1542,8 +1542,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Right: 0
   spriteRenderer: {fileID: 397996180}
-  EnemySpeed: 0.02
+  EnemySpeed: 0.0125
   SpwanPoint: {fileID: 0}
+  Move: 1
 --- !u!1 &430354703
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,6 +3841,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd0e01330168394793c23913e91f0c7, type: 3}
+--- !u!1 &776735255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776735256}
+  m_Layer: 0
+  m_Name: Spwan Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &776735256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776735255}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.189, y: -1.12, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &830497883
 GameObject:
   m_ObjectHideFlags: 0
@@ -11576,27 +11608,47 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 271416733753360949, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
       propertyPath: m_Size.x
-      value: 0.14371815
+      value: 0.13787696
+      objectReference: {fileID: 0}
+    - target: {fileID: 271416733753360949, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.17028113
       objectReference: {fileID: 0}
     - target: {fileID: 271416733753360949, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
       propertyPath: m_Offset.x
-      value: -0.00048546493
+      value: -0.000104531646
+      objectReference: {fileID: 0}
+    - target: {fileID: 271416733753360949, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.073081665
       objectReference: {fileID: 0}
     - target: {fileID: 1235194650982989545, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
       propertyPath: m_Size.x
-      value: 0.121671274
+      value: 0.13907644
       objectReference: {fileID: 0}
     - target: {fileID: 1235194650982989545, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
       propertyPath: m_Size.y
-      value: 0.029405713
+      value: 0.03035754
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235194650982989545, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1235194650982989545, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
       propertyPath: m_Offset.x
-      value: 0.000033052638
+      value: -0.00036389008
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235194650982989545, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.14589787
       objectReference: {fileID: 0}
     - target: {fileID: 2721813153687193908, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820567010463878486, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3546646548163401467, guid: 5b17a36b9968b7143b1afe9bd279399c, type: 3}
       propertyPath: Ui
@@ -11684,6 +11736,7 @@ SceneRoots:
   - {fileID: 4451766156151614098}
   - {fileID: 353922793}
   - {fileID: 8203985481699501376}
+  - {fileID: 776735256}
   - {fileID: 38139966}
   - {fileID: 257918899}
   - {fileID: 1188156329}

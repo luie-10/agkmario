@@ -10,6 +10,7 @@ public class goomva : MonoBehaviour
     public float EnemySpeed;
     Animator anim;
     public Transform SpwanPoint;
+    public bool Move = true;
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -37,18 +38,26 @@ public class goomva : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("Player"))
         {
             collision.collider.gameObject.GetComponent<Animator>().SetTrigger("Death");
+            collision.collider.gameObject.GetComponent<PlayerMove>().CanPlay = false;
+            collision.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            collision.collider.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            Move = false;
         }
     }
     void Update()
     {
-        if (!Right)
+        if (Move == true)
         {
-            this.transform.position = new Vector3(this.transform.position.x + EnemySpeed, transform.position.y, this.transform.position.z);
+            if (!Right)
+            {
+                this.transform.position = new Vector3(this.transform.position.x + EnemySpeed, transform.position.y, this.transform.position.z);
+            }
+            else if (Right)
+            {
+                this.transform.position = new Vector3(this.transform.position.x - EnemySpeed, transform.position.y, this.transform.position.z);
+            }
         }
-        else if (Right)
-        {
-            this.transform.position = new Vector3(this.transform.position.x - EnemySpeed, transform.position.y, this.transform.position.z);
-        }
+        
     }
     public IEnumerator Dead()
     {
