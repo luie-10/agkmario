@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerJump : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     public float jumpPower;
     public float moveSpeed; // 이동 속도

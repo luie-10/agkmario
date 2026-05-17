@@ -11,6 +11,7 @@ public class Fife : MonoBehaviour
     public float Num;
     public int count = 0;
     public GameObject Pife;
+    public string SceneName;
     void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -20,11 +21,12 @@ public class Fife : MonoBehaviour
             {
                 player.GetComponent<Animator>().enabled = false;
                 player.GetComponent<SpriteRenderer>().sprite = sprite;
-                player.GetComponent<PlayerJump>().CanPlay = false;
+                player.GetComponent<PlayerMove>().CanPlay = false;
                 player.GetComponent<BoxCollider2D>().enabled = false;
                 player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
                 Pife.GetComponent<BoxCollider2D>().enabled = false;
                 InvokeRepeating("rate", 1f, 0.2f);
+                SceneManager.LoadScene(SceneName);
             }
             
             

@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Floor
+  - Enemy
+  - Coin Box
+  - Player_Coin_Box
+  - Wall
+  - Fipe
+  - Player_Kill_enemy
+  - Coin
+  - Mush
   layers:
   - Default
   - TransparentFX

@@ -9,8 +9,7 @@ public class goomva : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public float EnemySpeed;
     Animator anim;
-    public GameObject goomba;
-
+    public Transform SpwanPoint;
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -35,6 +34,10 @@ public class goomva : MonoBehaviour
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             StartCoroutine("Dead");
         }
+        if (collision.collider.gameObject.CompareTag("Player"))
+        {
+            collision.collider.gameObject.GetComponent<Animator>().SetTrigger("Death");
+        }
     }
     void Update()
     {
@@ -50,7 +53,7 @@ public class goomva : MonoBehaviour
     public IEnumerator Dead()
     {
         yield return new WaitForSeconds(0.9f);
-        Destroy(goomba);
+        Destroy(this);
         
         
     }
